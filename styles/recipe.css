@@ -1,0 +1,15 @@
+body {
+    background-color: #121212;
+    color: blanchedalmond;
+}
+
+h1 {
+    text-align: center;
+    background-color: #512DA8;
+    color: #FFFFFF;
+}
+
+.recipe {
+    font-size: xx-large;
+    color: #673AB7;
+}
