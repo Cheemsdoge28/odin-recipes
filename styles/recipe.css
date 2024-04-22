@@ -1,12 +1,38 @@
 body {
     background-color: #121212;
     color: blanchedalmond;
+    text-align: justify;
+}
+
+img {
+    border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    background-color: #512DA8;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 h1 {
     text-align: center;
-    background-color: #512DA8;
+}
+
+.prev, nav {
+    font-size: xx-large;
+    background-color: #536DFE;
     color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav {
+    font-size: large;
+    background-color: #000000;
+    
 }
 
 .recipe {
