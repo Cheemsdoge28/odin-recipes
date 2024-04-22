@@ -2,6 +2,7 @@ body {
     background-color: #121212;
     color: blanchedalmond;
     text-align: justify;
+    zoom: 150%;
 }
 
 img {
@@ -20,7 +21,7 @@ h1 {
     text-align: center;
 }
 
-.prev, nav {
+.prev, nav, .navlink {
     font-size: xx-large;
     background-color: #536DFE;
     color: #FFFFFF;
@@ -32,7 +33,19 @@ h1 {
 nav {
     font-size: large;
     background-color: #000000;
-    
+    display: flex; /* Add flex display */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.navlink {
+    background-color: #D1C4E9;
+    color: #212121;
+    font-size: medium;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-clip: padding-box; /* Set background-clip to padding-box */
+    overflow: hidden; /* Add overflow: hidden; */
+    margin-top: 2%;
 }
 
 .recipe {
