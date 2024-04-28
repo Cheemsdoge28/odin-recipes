@@ -2,7 +2,6 @@ class GalleryView {
     constructor(divId) {
         this.galleryDiv = document.getElementById(divId);
         this.getImages();
-        this.numImages = this.images.length;
         this.currentIndex = 0;
         this.showCurrentImage(); // Show the first image when initialized
         this.createNavigationButtons();
@@ -10,31 +9,32 @@ class GalleryView {
 
     getImages() {
         if (this.galleryDiv !== null) {
-            this.images = this.galleryDiv.querySelectorAll('img');
+            this.images = Array.from(this.galleryDiv.querySelectorAll('img')); // Convert NodeList to array
+            console.log("Number of images found:", this.images.length); // Log the number of images found
+            this.numImages = this.images.length;
         }
     }
 
     createNavigationButtons() {
         const nextButton = document.createElement('div'); // Change button elements to div elements
         nextButton.textContent = 'Next';
-        nextButton.classList.add('button');
+        nextButton.classList.add('nav-button');
         nextButton.addEventListener('click', () => {
             this.nextImage();
             this.galleryDiv.focus();
         });
-    
+
         const prevButton = document.createElement('div'); // Change button elements to div elements
         prevButton.textContent = 'Previous';
-        prevButton.classList.add('button');
+        prevButton.classList.add('nav-button');
         prevButton.addEventListener('click', () => {
             this.prevImage();
             this.galleryDiv.focus();
         });
-    
+
         this.galleryDiv.appendChild(prevButton);
         this.galleryDiv.appendChild(nextButton);
     }
-    
 
     nextImage() {
         this.currentIndex++;
@@ -53,10 +53,20 @@ class GalleryView {
     }
 
     showCurrentImage() {
+        const galleryWidth = this.galleryDiv.offsetWidth;
+        const offset = -this.currentIndex * galleryWidth;
+
         for (let i = 0; i < this.numImages; i++) {
-            this.images[i].style.display = 'none';
+            if (i === this.currentIndex) {
+                this.images[i].style.display = 'block'; // Show the current image
+                this.images[i].style.transition = 'transform 0.5s ease'; // Add transition property
+            } else {
+                this.images[i].style.display = 'none'; // Hide all other images
+            }
+
+            const newPosition = i * galleryWidth + offset;
+            this.images[i].style.transform = `translateX(${newPosition}px)`; // Apply transform
         }
-        this.images[this.currentIndex].style.display = 'block';
     }
 }
 

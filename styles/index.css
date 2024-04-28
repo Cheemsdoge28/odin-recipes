@@ -1,41 +1,154 @@
 body {
     background-color: #121212;
     color: blanchedalmond;
+    text-align: justify;
+    zoom: 150%;
     margin: 0;
-    padding: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+img {
+    border-radius: 5px;
+    max-width: 100%;
 }
 
 header {
-    background-color: #512DA8;
-    color: #FFFFFF;
+    background-color: #333;
+    color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
-h1 {
+header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
-.recipe-list {
+nav {
+    margin-top: 0.5rem;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    background-color: #512DA8;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+h1 {
     text-align: center;
 }
 
-.recipe-list li {
-    margin: 1rem 0;
+.prev, nav, .navlink {
+    font-size: 1.5rem;
+    background-color: #536DFE;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.recipe-list a {
-    text-decoration: none;
-    color: #673AB7;
-    font-size: 1.5rem;
+nav {
+    font-size: 1rem;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navlink {
     background-color: #D1C4E9;
-    padding: 10px 20px;
+    color: #212121;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 10px;
     border-radius: 5px;
+    transition: color 0.4s, background-color 0.6s;
+}
+    
+
+.navlink:hover {
+    background-color: #673AB7;
+    color: #FFFFFF;
+}
+.recipe {
+    font-size: 2rem;
+    color: #673AB7;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .prev, .navlink {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .prev, .navlink {
+        font-size: 0.8rem;
+    }
+}
+
+.button, .nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #536DFE;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.nav-button {
+    background-color: #536DFE;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
     transition: background-color 0.4s ease;
 }
 
-.recipe-list a:hover {
-    background-color: #9575CD;
+.nav-button:hover {
+    background-color: #512DA8;
 }
+
