@@ -117,3 +117,29 @@ nav {
         font-size: 0.8rem;
     }
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #536DFE;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.imageContainer {
+    width: 100%; /* Ensure the container fills the available space */
+    overflow: hidden; /* Hide overflow content (images) */
+    white-space: nowrap; /* Ensure images are displayed in a single line */
+    transition: transform 0.5s ease; /* Add transition for smooth scrolling */
+}
+
+.imageContainer img {
+    width: 100%; /* Ensure images fill the container */
+    vertical-align: top; /* Align images to the top of the container*/
+}
