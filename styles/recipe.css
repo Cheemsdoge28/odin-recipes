@@ -12,10 +12,13 @@ body {
 }
 
 img {
-    margin: 1rem;
+    height: 400px; /* Or whatever height you want */
+    object-fit: cover;
+    width: auto;
+    margin: 1px;
     border-radius: 5px;
-    max-height: 40%;
 }
+
 
 header {
     background-color: #333;
